@@ -33,7 +33,7 @@ class AuthController {
       const data = await userdata.save();
       return res.status(201).json({
         success: true,
-        message: "user Register successfully",
+        message: "User Register successfully...",
         data: data,
       });
     } catch (err) {
@@ -77,7 +77,7 @@ class AuthController {
             role: user.is_admin,
           },
           process.env.JWT_SECRET_KEY,
-          { expiresIn: "1h" },
+          { expiresIn: "2h" },
         );
 
         return res.status(200).json({
